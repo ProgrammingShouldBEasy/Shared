@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using BlogPostWebsite.Models;
 
 namespace BlogPostWebsite.Controllers
 {
@@ -10,21 +11,25 @@ namespace BlogPostWebsite.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            PostViewModel model = new PostViewModel();
+            return View("Index", model);
         }
 
-        public ActionResult About()
+        public ActionResult Index(PostViewModel model)
         {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
+            return View(model);
         }
 
-        public ActionResult Contact()
+        public ActionResult Index(Post post)
         {
-            ViewBag.Message = "Your contact page.";
+            PostViewModel model = new PostViewModel();
+            return View("Index", model);
+        }
 
-            return View();
+        public ActionResult Index(Comment comment)
+        {
+            PostViewModel model = new PostViewModel();
+            return View("Index", model);
         }
     }
 }
