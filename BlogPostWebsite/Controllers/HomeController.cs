@@ -15,21 +15,23 @@ namespace BlogPostWebsite.Controllers
             return View("Index", model);
         }
 
-        public ActionResult Index(PostViewModel model)
+        public ActionResult IndexUpdated(PostViewModel model)
         {
             return View(model);
         }
 
-        public ActionResult Index(Post post)
+        [HttpPost]
+        public ActionResult IndexAddPost(Post post)
         {
             PostViewModel model = new PostViewModel();
-            return View("Index", model);
+            return View("IndexUpdated", model);
         }
 
-        public ActionResult Index(Comment comment)
+        [HttpPost]
+        public ActionResult IndexAddComment(Comment comment)
         {
             PostViewModel model = new PostViewModel();
-            return View("Index", model);
+            return View("IndexUpdated", model);
         }
     }
 }

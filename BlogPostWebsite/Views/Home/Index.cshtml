@@ -5,7 +5,7 @@
 
 @if (User.Identity.IsAuthenticated && User.IsInRole("admin"))
 {
-    using (Html.BeginForm("Index", "Home", FormMethod.Post))
+    using (Html.BeginForm("IndexAddPost", "Home", FormMethod.Post))
     {
         <table>
             <thead>
@@ -38,7 +38,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <button type="submit">Post</button>
+                        <button type="submit">Save Post</button>
                     </td>
                 </tr>
             </tbody>
@@ -82,7 +82,7 @@
                 </tr>
             </tfoot>
         }
-        @using (Html.BeginForm("Index","Home", FormMethod.Post))
+        @using (Html.BeginForm("IndexAddComment","Home", FormMethod.Post))
         {
             <thead>
                 <tr>
