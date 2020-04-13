@@ -5,7 +5,7 @@
 
 @if (User.Identity.IsAuthenticated && User.IsInRole("admin"))
 {
-    using (Html.BeginForm())
+    using (Html.BeginForm("Index", "Home", FormMethod.Post))
     {
         <table>
             <thead>
@@ -82,18 +82,31 @@
                 </tr>
             </tfoot>
         }
-        @using (Html.BeginForm())
+        @using (Html.BeginForm("Index","Home", FormMethod.Post))
         {
-            <table>
-                <thead>
-                    <tr>
-                        <td>
-                            <input type="text" id="PostId" value="@p.PostId" readonly/>
-                            <input type="text" value="@p."/>
-                        </td>
-                    </tr>
-                </thead>
-            </table>
+            <thead>
+                <tr>
+                    <td>
+                        <input type="text" id="PostId" value="@p.PostId" readonly />
+                        <input type="text" id="Name" value="Name" />
+                    </td>
+                    <td>
+                        <input type="text" id="DatePosted" value="@DateTime.Today" />
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <textarea id="CommentText" value=""></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="submit">Save Comment</button>
+                    </td>
+                </tr>
+            </tbody>
         }
     </table>
 }
