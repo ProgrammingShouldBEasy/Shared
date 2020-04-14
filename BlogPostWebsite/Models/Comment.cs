@@ -11,6 +11,7 @@ namespace BlogPostWebsite.Models
         public int PostId { get; set; }
         public string Name { get; set; }
         public string CommentText { get; set; }
+        public string DatePosted { get; set; }
         public DateTime CommentedOn { get; set; }
     }
 }
