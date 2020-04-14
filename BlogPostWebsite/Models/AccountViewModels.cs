@@ -49,6 +49,13 @@ namespace BlogPostWebsite.Models
     public class LoginViewModel
     {
         [Required]
+<<<<<<< Updated upstream
+=======
+        [Display(Name = "UserName")]
+        public string UserName { get; set; }
+
+        [Required]
+>>>>>>> Stashed changes
         [Display(Name = "Email")]
         [EmailAddress]
         public string Email { get; set; }

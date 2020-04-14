@@ -10,11 +10,10 @@ namespace BlogPostWebsite.Models
     {
         public int PostId { get; set; }
         public string Title { get; set; }
-        public string DatePosted { get; set; }
-        public string DateModified { get; set; }
         public string Description { get; set; }
-        public string AuthorName { get; set; }
-        public string Category { get; set; }
-        public List<Comment> Comments { get; set; }
+        public DateTime DatePosted { get; set; }
+        public DateTime DateModified { get; set; }
+        public string AuthorId { get; set; }
+        public int CategoryId { get; set; }
     }
 }

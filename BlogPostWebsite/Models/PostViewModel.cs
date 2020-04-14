@@ -8,6 +8,8 @@ namespace BlogPostWebsite.Models
 {
     public class PostViewModel
     {
-        public List<Post> Posts { get; set; }
+        public Post Post { get; set; }
+        public string AuthorName { get; set; }
+        public List<Comment> Comments { get; set; }
     }
 }

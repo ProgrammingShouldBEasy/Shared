@@ -16,7 +16,11 @@ namespace BlogPostWebsite
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
+<<<<<<< Updated upstream
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+=======
+                defaults: new { controller = "Blog", action = "Index", id = UrlParameter.Optional }
+>>>>>>> Stashed changes
             );
         }
     }
